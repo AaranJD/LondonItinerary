@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: #243447;
+    color: lightgray;
+    /* 
+        #c51f5d 
+        #1da1f2
+
+        #3bba9c
+        #2e3047
+        #43455c
+        #3c3f58
+        #707793
+        #767a89
+    */
+}
+
+.dark-mode .left button {
+    background-color: #767a89;
+    color: lightgray;
+}
+
+.dark-mode .left button:hover {
+    background-color: #1da1f2;
+    color: white;
+    border-color: white;
+}
+
+.header {
+    display: flex;
+}
+
+.header img {
+    height: 24px;
+}
+
+.full-screen {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    float: left;
+    text-align: center;
+    padding: 24px;
+}
+
+#buttonRow {
+    margin: 16px;
+    margin-top: 24px;
+}
+
+.filterRow {
+    margin: 16px;
+    padding: 0px 24px;
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+.left button {
+    margin: 0px 8px;
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    border-radius: 2rem;
+    width: 15%;
+    padding: .375rem .75rem;
+}
+
+.header button {
+    border: none;
+}
+
+button.btn.active, button:hover {
+    background-color: lightgray;
+}
+
+.dark-mode button.btn.active {
+    background-color: #1da1f2;
+    color: white;
+    border-color: white;
+}
+
+.left .dropdown {
+    float: left;
+}
+.dropdown button {
+    background-color: white;
+    color: black;
+    width: auto;
+}
+
+.Day {
+    margin: 16px;
+    float: left;
+    text-align: center;
+    width: 95%;
+}
+
+.Day span {
+        padding: 0px 8px;
+}
+
+.Day span:hover {
+    text-decoration: underline;
+}
+
+.themeButton {
+    width: 94%;
+    bottom: 8px;
+    position: absolute;
+}
+
+.themeButton Button {
+    margin: 8px auto;
+    display: block;
+}
+
+.right {
+    width: 55%;
+    float: left;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+.dropdown-menu .item {
+    padding: 12px;
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+.dropdown-menu .item:hover {
+    background-color: lightgray;
+}
+
+.dropdown-menu img {
+    width: 24px;
+    margin-right: 16px;
+    float: left;
+}
+
+/* Google maps info window text color */
+.gm-style-iw-d {
+    color: black;
+}
