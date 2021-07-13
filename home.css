@@ -1,0 +1,102 @@
+.landing {
+    background-color: #243447;
+    color: lightgray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+}
+
+.landing h1 {
+    text-align: center;
+    margin: 32px auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header h4 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-button {
+    height: 32px;
+    width: 32px;
+    padding: 6px;
+    float: right;
+    border-radius: 50%;
+    fill: black;
+}
+
+.header-button:hover {
+    background-color: rgba(218,220,224,.5);
+}
+
+.header button {
+    border: none;
+}
+
+.dark-mode .header-button {
+    fill: lightgray;
+}
+
+.tourOptionsRow {
+    width: 100%;
+    margin: 0px 32px;
+}
+
+.tour {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding-bottom: 16px;
+    margin: 32px;
+    float: left;
+}
+
+.tour img {
+    width: 100%;
+    height:  100%;
+}
+
+.title {
+    padding: 8px 0px;
+    font-size: large;
+    color: white;
+}
+
+#newTour {
+    height: auto;
+    width: auto;
+    padding: 0 8px;
+}
+
+#newTour img {
+    height: 64px;
+    margin-bottom: 8px;
+}
+
+.darkMode {
+    margin: auto;
+    background-color: lightslategray;
+    border: 1px solid #6c757d;
+    border-radius: 2rem;
+    width: 10%;
+    padding: .375rem .75rem;
+}
+
+.darkMode button {
+    background-color: transparent;
+    border: none;    
+}
+
+.themeButton .darkMode:hover {
+    background-color: #1da1f2;
+    color: white;
+    border-color: white;
+}

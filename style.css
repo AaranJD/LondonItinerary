@@ -1,15 +1,27 @@
+:root {
+    /*LIGHT THEME */
+    --clr-primary-400: #000;
+    --clr-bg: #fff; 
+    /* DARK THEME */
+    --clr-primary-dark-400: #d3d3d3;
+    --clr-bg-dark: #212e3d;
+    /* COLUMN WIDTH */
+    --col-left-w: 45%;
+    --col-right-w: calc(100% - var(--col-left-w));
+}
+
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: var(--clr-bg);
+    color: var(--clr-primary-400);
 }
 
 .dark-mode {
-    background-color: #243447;
-    color: lightgray;
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-primary-dark-400);
     /* 
         #c51f5d 
         #1da1f2
@@ -25,7 +37,7 @@ body {
 
 .dark-mode .left button {
     background-color: #767a89;
-    color: lightgray;
+    color: var(--clr-primary-dark-400);
 }
 
 .dark-mode .left button:hover {
@@ -36,11 +48,41 @@ body {
 
 .header {
     display: flex;
+    align-items: center;
 }
 
-.header img {
-    height: 24px;
+.header h4 {
+    margin-left: auto;
+    margin-right: auto;
 }
+
+#dropdownMenuLink {
+    background: transparent;
+    border: none;
+    color: black;
+}
+
+.dark-mode #dropdownMenuLink {
+    color: lightgray;
+}
+
+.header-button {
+    height: 32px;
+    width: 32px;
+    padding: 6px;
+    float: right;
+    border-radius: 50%;
+    fill: black;
+}
+
+.header-button:hover {
+    background-color: rgba(218,220,224,.5);
+}
+
+.dark-mode .header-button {
+    fill: lightgray;
+}
+
 
 .full-screen {
     width: 100%;
@@ -50,7 +92,7 @@ body {
 }
 
 .left {
-    width: 45%;
+    width: var(--col-left-w);
     height: 100%;
     position: relative;
     float: left;
@@ -74,11 +116,11 @@ body {
 }
 
 .left button {
-    margin: 0px 8px;
+    margin: 4px 8px;
     background-color: transparent;
     border: 1px solid #6c757d;
     border-radius: 2rem;
-    width: 15%;
+    width: 5rem;
     padding: .375rem .75rem;
 }
 
@@ -96,9 +138,6 @@ button.btn.active, button:hover {
     border-color: white;
 }
 
-.left .dropdown {
-    float: left;
-}
 .dropdown button {
     background-color: white;
     color: black;
@@ -113,26 +152,15 @@ button.btn.active, button:hover {
 }
 
 .Day span {
-        padding: 0px 8px;
+    padding: 0px 8px;
 }
 
 .Day span:hover {
     text-decoration: underline;
 }
 
-.themeButton {
-    width: 94%;
-    bottom: 8px;
-    position: absolute;
-}
-
-.themeButton Button {
-    margin: 8px auto;
-    display: block;
-}
-
 .right {
-    width: 55%;
+    width: var(--col-right-w);
     float: left;
 }
 
@@ -159,4 +187,19 @@ button.btn.active, button:hover {
 /* Google maps info window text color */
 .gm-style-iw-d {
     color: black;
+}
+
+#legend {
+    background: #fff;
+    color: black;
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+
+#legend img {
+    width: 24px;
+    margin: 1px;
 }

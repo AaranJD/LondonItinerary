@@ -31,6 +31,7 @@ function filterDay(e) {
   } 
   initMap();
 };
+
 //Filter the list by types
 function filterTypes(e) {
   let filter = e.target.dataset.filter; // grab the value in the event target's data-filter attribute
@@ -58,7 +59,6 @@ function darkMode() {
 }
 
 //FILTER BUTTONS
-//DARK MODE
 function filterButtons() {
   var element = document.btnContainer;
   element.classList.toggle(" active");
@@ -66,6 +66,7 @@ function filterButtons() {
 
 let map;
 const london = { lat: 51.517, lng: -0.148 };
+let markers = [];
 
 function CenterControl(controlDiv, map) {
   // Set CSS for the control border.
@@ -96,6 +97,62 @@ function CenterControl(controlDiv, map) {
     map.setZoom(13);
   });
 }
+
+// function LegendControl(legendDiv, map) {
+//   const legendUI = document.createElement("div");
+//   legendUI.style.backgroundColor = "#fff";
+//   legendUI.style.border = "2px solid #fff";
+//   legendUI.style.borderRadius = "3px";
+//   legendUI.style.boxShadow = "0 2px 6px rgba(0,0,0,.3)";
+//   legendUI.style.cursor = "pointer";
+//   legendUI.style.marginTop = "8px";
+//   legendUI.style.marginBottom = "22px";
+//   legendUI.style.textAlign = "center";
+//   legendUI.title = "Click to recenter the map";
+//   legendDiv.appendChild(legendUI);
+
+//   var legendTitles = [
+//     ['Museum'],
+//     ['Art Gallery'],
+//     ['Market'],
+//     ['Park'],
+//     ['Architecture'],
+//     ['Church'],
+//     ['Library']
+//   ]
+
+//   for (i = 0; i < 7; i++) {
+//     const legendText = document.createElement("div");
+//     legendText.style.color = "rgb(25,25,25)";
+//     legendText.style.fontFamily = "Roboto,Arial,sans-serif";
+//     legendText.style.fontSize = "16px";
+//     legendText.style.lineHeight = "38px";
+//     legendText.style.paddingLeft = "5px";
+//     legendText.style.paddingRight = "5px";
+//     legendText.innerHTML = "http://maps.google.com/mapfiles/ms/icons/red-dot.png" + legendTitles[i];
+//     legendUI.appendChild(legendText);
+//   }
+  
+
+// //   .gm-style-iw-d {
+// //     color: black;
+// // }
+
+// // #legend {
+// //     background: #fff;
+// //     color: black;
+// //     padding: 8px;
+// //     margin-left: 10px;
+// //     border: 1px solid lightgray;
+// //     border-radius: 3px;
+// //     box-shadow: 0 2px 6px rgba(0,0,0,.3);
+// // }
+
+// // #legend img {
+// //     width: 24px;
+// //     margin: 1px;
+// // }
+// }
 
 // Initialize and add the map
 function initMap() {
@@ -137,11 +194,57 @@ function initMap() {
       zoom: 13,
       center: london,
     });
+    //Airbnb Marker
+    var icon = {
+      url: "Images/house-fill-dark.svg", // url
+      scaledSize: new google.maps.Size(24, 24), // scaled size
+      origin: new google.maps.Point(0,0), // origin
+      anchor: new google.maps.Point(0, 0) // anchor
+    };
+
+    new google.maps.Marker({
+      position: new google.maps.LatLng(51.538136, -0.121),
+      map,
+      title: "Airbnb",
+      icon: icon
+    });
     // Create the DIV to hold the control and call the CenterControl()
     // constructor passing in this DIV.
     const centerControlDiv = document.createElement("div");
     CenterControl(centerControlDiv, map);
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+
+    // Maps legend
+    const icons = {
+      museum: {
+        name: "Museum",
+        icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+      },
+      gallery: {
+        name: "Art Gallery",
+        icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png",
+      },
+      park: {
+        name: "Park",
+        icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+      },
+      market: {
+        name: "Market",
+        icon: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png",
+      },
+      architecture: {
+        name: "Architecture",
+        icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png",
+      },
+      church: {
+        name: "Church",
+        icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+      },
+      library: {
+        name: "Library",
+        icon: "http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png",
+      },
+    };
 
     // Map Markers
     var infowindow = new google.maps.InfoWindow();
@@ -150,11 +253,11 @@ function initMap() {
       x = 0;
       y = locations.length;
     } else if (Day == "One") {
-      x = 0;
-      y = 8;
-    } else if (Day == "Two") {
       x = 8;
       y = 14;
+    } else if (Day == "Two") {
+      x = 0;
+      y = 8;
     } else if (Day == "Three") {
       x = 14;
       y = 23;
@@ -191,4 +294,44 @@ function initMap() {
         }
       })(marker, i));
     }
+
+    const legend = document.getElementById("legend");
+
+    for (const key in icons) {
+      const type = icons[key];
+      const name = type.name;
+      const icon = type.icon;
+      const div = document.createElement("div");
+      div.innerHTML = '<img src="' + icon + '"> ' + name;
+      legend.appendChild(div);
+    }
+
+    map.controls[google.maps.ControlPosition.LEFT].push
+      (document.getElementById('legend'));
+}
+
+// Adds a marker to the map and push to the array.
+function addMarker(position) {
+  const marker = new google.maps.Marker({
+    position,
+    map,
+  });
+  markers.push(marker);
+}
+
+// Sets the map on all markers in the array.
+function setMapOnAll(map) {
+  for (let i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
+
+// Removes the markers from the map, but keeps them in the array.
+function hideMarkers() {
+  setMapOnAll(null);
+}
+
+// Shows any markers currently in the array.
+function showMarkers() {
+  setMapOnAll(map);
 }
