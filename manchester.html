@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!doctype html>
 <html lang="en">
@@ -140,3 +141,147 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEnr2UoILPemB3dwavx2lR2MMR-hQenL8&callback=initMap&libraries=&v=weekly" async></script>
   </body>
 </html>
+=======
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="dark-mode">
+    <div class="full-screen">
+        <div class="left">
+            <h3>Manchester Trip Guide</h3>
+            <div id="buttonRow">
+                <button class="btn active" data-filter="*" onclick="filterDay(event)">All</button>
+                <button class="btn" data-filter="One" onclick="filterDay(event)">Day 1</button>
+                <button class="btn" data-filter="Two" onclick="filterDay(event)">Day 2</button>
+                <button class="btn" data-filter="Three" onclick="filterDay(event)">Day 3</button>
+                <button class="btn" data-filter="Four" onclick="filterDay(event)">Day 4</button>
+            </div>
+            <!-- <div class="filterRow">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Attraction Type
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="width: max-content;">
+                      <div class="item" data-filter="*" onclick="filterTypes(event)">
+                        <a>All</a>
+                      </div>
+                      <div class="item" data-filter="museum" onclick="filterTypes(event)">
+                        <img src="Images/museum.svg">
+                        <a>Museum</a>
+                        <img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" style="float:right; margin: auto;">
+                      </div>
+                      <div class="item" data-filter="gallery" onclick="filterTypes(event)">
+                        <img src="Images/gallery.svg">
+                        <a>Art Gallery</a>
+                        <img src="http://maps.google.com/mapfiles/ms/icons/purple-dot.png" style="float:right; margin: auto;">
+                      </div>
+                      <div class="item" data-filter="park" onclick="filterTypes(event)">
+                        <img src="Images/park.svg">                      
+                        <a>Parks</a>
+                        <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" style="float:right; margin: auto;">
+                      </div>
+                      <div class="item" data-filter="market" onclick="filterTypes(event)">
+                        <img src="Images/market.svg">                        
+                        <a>Markets</a>
+                        <img src="http://maps.google.com/mapfiles/ms/icons/orange-dot.png" style="float:right; margin: auto;">
+                      </div>
+                      <div class="item" data-filter="architecture" onclick="filterTypes(event)">
+                        <img src="Images/Architecture.svg">
+                        <a>Architecture</a>
+                        <img src="http://maps.google.com/mapfiles/ms/icons/pink-dot.png" style="float:right; margin: auto;">
+                      </div>
+                      <div class="item" data-filter="church" onclick="filterTypes(event)">
+                        <img src="Images/Church.svg">
+                        <a>Church</a>
+                        <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" style="float:right; margin: auto;">
+                      </div>
+                      <div class="item"  data-filter="library" onclick="filterTypes(event)">
+                        <img src="Images/Library.svg">
+                        <a>Library</a>
+                        <img src="http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png" style="float:right; margin: auto;">
+                      </div>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Area
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <div class="item"><a>Bricklane</a></div>
+                      <div class="item"><a>Chinatown</a></div>
+                      <div class="item"><a>Covent Gardens</a></div>
+                      <div class="item"><a>Little Venice</a></div>
+                      <div class="item"><a>Nottinghill</a></div>
+                      <div class="item"><a>Shoreditch</a></div>
+                      <div class="item"><a>Soho</a></div>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="Day One">
+                <h6>Day One:</h5>
+                <span>Portabello Road Market</span>
+                <span>Holland Park</span>
+                <span>Science Museum</span>
+                <span>Kensington Gardens</span>
+                <span>Hyde Park</span>
+                <span>Natural History Museum</span>
+                <span>Harrods</span>
+                <span>V&A Museum</span>
+            </div>
+            <div class="Day Two">
+                <h6>Day Two:</h5> 
+                <span>Camden Market</span>
+                <span>Regents Park</span>
+                <span>Wallace Collection</span>
+                <span>The British Museum</span>
+                <span>Wellcome Collection</span>
+                <span>British Library</span>
+            </div>
+            <div class="Day Three">
+                <h6>Day Three:</h5>
+                <span>Covent Gardens</span>
+                <span>St Jamess Park</span>
+                <span>Westminster Abbey</span>
+                <span>Houses of Parliament</span>
+                <span>Tate Britain</span>
+                <span>Westminster Cathedral</span>
+                <span>Buckinham Palace</span>
+                <span>Royal Academy of Arts</span>
+                <span>Lego Shop</span>
+                <span>National Gallery</span>
+            </div>
+            <div class="Day Four">
+                <h6>Day Four:</h5>
+                <span>Borough Market</span>
+                <span>Tate Modern</span>
+                <span>St Pauls Cathedral</span>
+                <span>Sky Gardens</span>
+                <span>St Dunstan in the East</span>
+                <span>Leadenhall Market</span>
+                <span>Barbican Conservatory</span>
+            </div>
+            <div>
+              <div class="themeButton">
+                <a href="index.html"><button><img src="Images/house-fill.svg"></button></a>
+                <button onclick="darkMode()"><img src="Images/brightness-high-fill.svg"></button>
+              </div>
+            </div>
+        </div>
+        <div class="right">
+            <div id="map"></div>
+            <div id="legend"></div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEnr2UoILPemB3dwavx2lR2MMR-hQenL8&callback=initMap&libraries=&v=weekly" async></script>
+  </body>
+</html>
+>>>>>>> e03e0c265dd03633b62e0d62bf149a6cb2cccd7f
