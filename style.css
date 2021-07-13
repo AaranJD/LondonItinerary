@@ -1,0 +1,214 @@
+:root {
+    /*LIGHT THEME */
+    --clr-primary-400: #000;
+    --clr-secondary-400: #fff;
+    --clr-bg: #fff; 
+    --clr-btn-bg: ;
+    --clr-btn-hover: ;
+    /* DARK THEME */
+    --clr-primary-dark-400: #d3d3d3;
+    --clr-bg-dark: #212e3d;
+    --clr-btn-bg-dark: #767a89;
+    --clr-btn-hover-dark: #1da1f2;
+    /* COLUMN WIDTHs */
+    --col-left-w: 45%;
+    --col-right-w: calc(100% - var(--col-left-w));
+    /* MARGINS */
+
+    /* PADDINGS */
+    --left-padding: 24px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--clr-bg);
+    color: var(--clr-primary-400);
+}
+
+.dark-mode {
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-primary-dark-400);
+    /* 
+        #c51f5d 
+        #1da1f2
+
+        #3bba9c
+        #2e3047
+        #43455c
+        #3c3f58
+        #707793
+        #767a89
+    */
+}
+
+.dark-mode .left button {
+    background-color: var(--clr-btn-bg-dark);
+    color: var(--clr-primary-dark-400);
+}
+
+.dark-mode .left button:hover {
+    background-color: var(--clr-btn-hover-dark);
+    color: var(--clr-secondary-400);
+    border-color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header h4 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dropdownMenuLink {
+    background: transparent;
+    border: none;
+    color: var(--clr-primary-dark-400);
+}
+
+.dark-mode #dropdownMenuLink {
+    color: var(--clr-primary-dark-400);
+}
+
+.header-button {
+    height: 32px;
+    width: 32px;
+    padding: 6px;
+    float: right;
+    border-radius: 50%;
+    fill: var(--clr-primary-400);
+}
+
+.header-button:hover {
+    background-color: rgba(218,220,224,.5);
+}
+
+.dark-mode .header-button {
+    fill: var(--clr-primary-dark-400);
+}
+
+
+.full-screen {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    width: var(--col-left-w);
+    height: 100%;
+    position: relative;
+    float: left;
+    text-align: center;
+    padding: 24px;
+}
+
+#buttonRow {
+    margin: 16px;
+    margin-top: 24px;
+}
+
+.filterRow {
+    margin: 16px;
+    padding: 0px 24px;
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+.left button {
+    margin: 4px 8px;
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    border-radius: 2rem;
+    width: 5rem;
+    padding: .375rem .75rem;
+}
+
+.header button {
+    border: none;
+}
+
+button.btn.active, button:hover {
+    background-color: var(--clr-primary-dark-400);
+}
+
+.dark-mode button.btn.active {
+    background-color: var(--clr-btn-hover-dark);
+    color: var(--clr-secondary-400);
+    border-color: white;
+}
+
+.dropdown button {
+    background-color: var(--clr-secondary-400);
+    color: var(--clr-primary-400);
+    width: auto;
+}
+
+.Day {
+    margin: 16px;
+    float: left;
+    text-align: center;
+    width: 95%;
+}
+
+.Day span {
+    padding: 0px 8px;
+}
+
+.Day span:hover {
+    text-decoration: underline;
+}
+
+.right {
+    width: var(--col-right-w);
+    float: left;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+.dropdown-menu .item {
+    padding: 12px;
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+.dropdown-menu .item:hover {
+    background-color: var(--clr-primary-dark-400);
+}
+
+.dropdown-menu img {
+    width: 24px;
+    margin-right: 16px;
+    float: left;
+}
+
+/* Google maps info window text color */
+.gm-style-iw-d {
+    color: var(--clr-primary-400);
+}
+
+#legend {
+    background: var(--clr-bg);
+    color: var(--clr-primary-400);
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+
+#legend img {
+    width: 24px;
+    margin: 1px;
+}

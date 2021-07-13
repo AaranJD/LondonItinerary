@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+    <title>Itinerary</title>
+</head>
+<body>
+    <div class="landing">
+        <div class="header">
+            <div style="width: 25%;">
+            </div>
+            <h1>Choose tour location</h1>
+            <div style="width: 25%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#d3d3d3" class="theme header-button" viewBox="0 0 16 16" onclick="darkMode()">
+                    <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="tourOptionsRow">
+            <a href="london.html"><div class="tour">
+                <img src="Images/topic-london-gettyimages-760251843-promo.jpg">
+                <div class="title">London</div>
+            </div></a>
+            <a href="manchester.html"><div class="tour">
+                <img src="Images/manchester.jpeg">
+                <div class="title">Manchester</div>
+            </div></a>
+            <a href="edinbrugh.html"><div class="tour">
+                <img src="Images/edinburgh.jpeg">
+                <div class="title">Edinburgh</div>          
+            </div></a>
+            <a href="newyork.html"><div class="tour">
+                <img src="Images/newyork.jpeg">
+                <div class="title">New York</div>
+            </div></a>
+            <div class="tour" id="newTour">
+                <img src="Images/plus-circle-fill.svg">
+                <div class="title">Create new tour</div>
+            </div>
+        </div> 
+
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEnr2UoILPemB3dwavx2lR2MMR-hQenL8&callback=initMap&libraries=&v=weekly" async></script>
+</body>
+</html>

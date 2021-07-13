@@ -1,0 +1,123 @@
+:root {
+    /*LIGHT THEME */
+    --clr-primary-400: #000;
+    --clr-secondary-400: #fff;
+    --clr-bg: #fff; 
+    --clr-btn-bg: ;
+    --clr-btn-hover: ;
+    /* DARK THEME */
+    --clr-primary-dark-400: #d3d3d3;
+    --clr-bg-dark: #212e3d;
+    --clr-btn-bg-dark: #767a89;
+    --clr-btn-hover-dark: #1da1f2;
+    /* COLUMN WIDTHs */
+    --col-left-w: 45%;
+    --col-right-w: calc(100% - var(--col-left-w));
+    /* MARGINS */
+
+    /* PADDINGS */
+    --left-padding: 24px;
+}
+
+.landing {
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-primary-dark-400);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+}
+
+.landing h1 {
+    text-align: center;
+    margin: 32px auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header h4 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-button {
+    height: 32px;
+    width: 32px;
+    padding: 6px;
+    float: right;
+    border-radius: 50%;
+    fill: var(--clr-primary-400);
+}
+
+.header-button:hover {
+    background-color: rgba(218,220,224,.5);
+}
+
+.header button {
+    border: none;
+}
+
+.dark-mode .header-button {
+    fill: var(--clr-primary-dark-400);
+}
+
+.tourOptionsRow {
+    width: 100%;
+    margin: 0px 32px;
+}
+
+.tour {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding-bottom: 16px;
+    margin: 32px;
+    float: left;
+}
+
+.tour img {
+    width: 100%;
+    height:  100%;
+}
+
+.title {
+    padding: 8px 0px;
+    font-size: large;
+    color: var(--clr-secondary-400);
+}
+
+#newTour {
+    height: auto;
+    width: auto;
+    padding: 0 8px;
+}
+
+#newTour img {
+    height: 64px;
+    margin-bottom: 8px;
+}
+
+.darkMode {
+    margin: auto;
+    background-color: var(--clr-btn-bg-dark);
+    border: 1px solid #6c757d;
+    border-radius: 2rem;
+    width: 10%;
+    padding: .375rem .75rem;
+}
+
+.darkMode button {
+    background-color: transparent;
+    border: none;    
+}
+
+.themeButton .darkMode:hover {
+    background-color: var(--clr-btn-hover-dark);
+    color: var(--clr-secondary-400);
+    border-color: white;
+}
