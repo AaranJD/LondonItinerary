@@ -1,13 +1,22 @@
 :root {
     /*LIGHT THEME */
     --clr-primary-400: #000;
+    --clr-secondary-400: #fff;
     --clr-bg: #fff; 
+    --clr-btn-bg: ;
+    --clr-btn-hover: ;
     /* DARK THEME */
     --clr-primary-dark-400: #d3d3d3;
     --clr-bg-dark: #212e3d;
-    /* COLUMN WIDTH */
+    --clr-btn-bg-dark: #767a89;
+    --clr-btn-hover-dark: #41dab6;
+    /* COLUMN WIDTHs */
     --col-left-w: 45%;
     --col-right-w: calc(100% - var(--col-left-w));
+    /* MARGINS */
+
+    /* PADDINGS */
+    --left-padding: 24px;
 }
 
 body {
@@ -36,13 +45,13 @@ body {
 }
 
 .dark-mode .left button {
-    background-color: #767a89;
+    background-color: var(--clr-btn-bg-dark);
     color: var(--clr-primary-dark-400);
 }
 
 .dark-mode .left button:hover {
-    background-color: #1da1f2;
-    color: white;
+    background-color: var(--clr-btn-hover-dark);
+    color: var(--clr-secondary-400);
     border-color: white;
 }
 
@@ -59,11 +68,11 @@ body {
 #dropdownMenuLink {
     background: transparent;
     border: none;
-    color: black;
+    color: var(--clr-primary-400);
 }
 
 .dark-mode #dropdownMenuLink {
-    color: lightgray;
+    color: var(--clr-primary-dark-400);
 }
 
 .header-button {
@@ -72,7 +81,7 @@ body {
     padding: 6px;
     float: right;
     border-radius: 50%;
-    fill: black;
+    fill: var(--clr-primary-400);
 }
 
 .header-button:hover {
@@ -80,7 +89,7 @@ body {
 }
 
 .dark-mode .header-button {
-    fill: lightgray;
+    fill: var(--clr-primary-dark-400);
 }
 
 
@@ -129,18 +138,18 @@ body {
 }
 
 button.btn.active, button:hover {
-    background-color: lightgray;
+    background-color: var(--clr-primary-dark-400);
 }
 
 .dark-mode button.btn.active {
-    background-color: #1da1f2;
-    color: white;
+    background-color: var(--clr-btn-hover-dark);
+    color: var(--clr-secondary-400);
     border-color: white;
 }
 
 .dropdown button {
-    background-color: white;
-    color: black;
+    background-color: var(--clr-secondary-400);
+    color: var(--clr-primary-400);
     width: auto;
 }
 
@@ -157,6 +166,7 @@ button.btn.active, button:hover {
 
 .Day span:hover {
     text-decoration: underline;
+    color: var(--clr-btn-hover-dark);
 }
 
 .right {
@@ -175,7 +185,7 @@ button.btn.active, button:hover {
 }
 
 .dropdown-menu .item:hover {
-    background-color: lightgray;
+    background-color: var(--clr-primary-dark-400);
 }
 
 .dropdown-menu img {
@@ -184,14 +194,48 @@ button.btn.active, button:hover {
     float: left;
 }
 
+#tabsRow {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 24px;
+}
+
+.tab {
+    display: inline-grid;
+    margin-right: 32px;
+    font-size: 10px;
+}
+
+.tab svg {
+    margin: auto;
+    margin-bottom: 8px;
+    width: 24px;
+    height: auto; 
+}
+
+.tab.on > svg {
+    width: 40px;
+    height: auto;
+    fill: var(--clr-btn-hover-dark);
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+.tab.on > span {
+    color: var(--clr-btn-hover-dark);
+    font-size: 13px;
+}
+
 /* Google maps info window text color */
 .gm-style-iw-d {
-    color: black;
+    color: var(--clr-primary-400);
 }
 
 #legend {
-    background: #fff;
-    color: black;
+    background: var(--clr-bg);
+    color: var(--clr-primary-400);
     padding: 8px;
     margin-left: 10px;
     border: 1px solid lightgray;

@@ -1,6 +1,27 @@
+:root {
+    /*LIGHT THEME */
+    --clr-primary-400: #000;
+    --clr-secondary-400: #fff;
+    --clr-bg: #fff; 
+    --clr-btn-bg: ;
+    --clr-btn-hover: ;
+    /* DARK THEME */
+    --clr-primary-dark-400: #d3d3d3;
+    --clr-bg-dark: #212e3d;
+    --clr-btn-bg-dark: #767a89;
+    --clr-btn-hover-dark: #1da1f2;
+    /* COLUMN WIDTHs */
+    --col-left-w: 45%;
+    --col-right-w: calc(100% - var(--col-left-w));
+    /* MARGINS */
+
+    /* PADDINGS */
+    --left-padding: 24px;
+}
+
 .landing {
-    background-color: #243447;
-    color: lightgray;
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-primary-dark-400);
     position: fixed;
     top: 0;
     left: 0;
@@ -28,9 +49,10 @@
     height: 32px;
     width: 32px;
     padding: 6px;
+    margin-right: 32px;
     float: right;
     border-radius: 50%;
-    fill: black;
+    fill: var(--clr-primary-400);
 }
 
 .header-button:hover {
@@ -42,7 +64,7 @@
 }
 
 .dark-mode .header-button {
-    fill: lightgray;
+    fill: var(--clr-primary-dark-400);
 }
 
 .tourOptionsRow {
@@ -67,7 +89,7 @@
 .title {
     padding: 8px 0px;
     font-size: large;
-    color: white;
+    color: var(--clr-secondary-400);
 }
 
 #newTour {
@@ -83,7 +105,7 @@
 
 .darkMode {
     margin: auto;
-    background-color: lightslategray;
+    background-color: var(--clr-btn-bg-dark);
     border: 1px solid #6c757d;
     border-radius: 2rem;
     width: 10%;
@@ -96,7 +118,7 @@
 }
 
 .themeButton .darkMode:hover {
-    background-color: #1da1f2;
-    color: white;
+    background-color: var(--clr-btn-hover-dark);
+    color: var(--clr-secondary-400);
     border-color: white;
 }

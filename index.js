@@ -11,6 +11,20 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+// Get the container element
+var tabContainer = document.getElementById("tabsRow");
+// Get all buttons with class="btn" inside the container
+var tabs = tabContainer.getElementsByClassName("tab");
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener("click", function() {
+    var c = document.getElementsByClassName("on");
+    c[0].className = c[0].className.replace(" on", "");
+    this.className += " on";
+  });
+}
+
 //Filter the list by days
 function filterDay(e) {
   let filter = e.target.dataset.filter; // grab the value in the event target's data-filter attribute
@@ -30,6 +44,30 @@ function filterDay(e) {
     }
   } 
   initMap();
+};
+
+//Filter the list by tab options
+function tabFilter(e) {
+  let filter = e.target.dataset.filter; // grab the value in the event target's data-filter attribute
+  var items = document.getElementsByClassName('Day'), i;
+
+  for (i = 0; i < items.length; i += 1) {
+    if (items[i].className != filter) {
+      items[i].style.display = 'none';
+    } 
+    if (items[i].className == filter) {
+      items[i].style.display = '';
+    }
+  } 
+};
+
+//Filter the list by tab
+function foodtabFilter() {
+  var day = document.getElementsByClassName('Day'), i;
+
+  for (i = 0; i < day.length; i += 1) {
+    day[i].style.display = 'none';
+  }
 };
 
 //Filter the list by types
@@ -216,33 +254,61 @@ function initMap() {
 
     // Maps legend
     const icons = {
+      // museum: {
+      //   name: "Museum",
+      //   icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+      // },
+      // gallery: {
+      //   name: "Art Gallery",
+      //   icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png",
+      // },
+      // park: {
+      //   name: "Park",
+      //   icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+      // },
+      // market: {
+      //   name: "Market",
+      //   icon: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png",
+      // },
+      // architecture: {
+      //   name: "Architecture",
+      //   icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png",
+      // },
+      // church: {
+      //   name: "Church",
+      //   icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+      // },
+      // library: {
+      //   name: "Library",
+      //   icon: "http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png",
+      // },
       museum: {
         name: "Museum",
-        icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+        icon: "Images/museumIcon3.svg",
       },
       gallery: {
         name: "Art Gallery",
-        icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png",
+        icon: "Images/artgallery.svg",
       },
       park: {
         name: "Park",
-        icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+        icon: "Images/parkIcon.svg",
       },
       market: {
         name: "Market",
-        icon: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png",
+        icon: "Images/marketIcon.svg",
       },
       architecture: {
         name: "Architecture",
-        icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png",
+        icon: "Images/architectureIcon.svg",
       },
       church: {
         name: "Church",
-        icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+        icon: "Images/churchIcon.svg",
       },
       library: {
         name: "Library",
-        icon: "http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png",
+        icon: "Images/libraryIcon.svg",
       },
     };
 
@@ -267,20 +333,28 @@ function initMap() {
     }
     for (i = x; i < y; i++) { 
       let url;
-      if      (locations[i][3] == 'museum')       { url = "http://maps.google.com/mapfiles/ms/icons/red-dot.png" } 
-      else if (locations[i][3] == 'art')          { url = "http://maps.google.com/mapfiles/ms/icons/purple-dot.png" } 
-      else if (locations[i][3] == 'park')         { url = "http://maps.google.com/mapfiles/ms/icons/green-dot.png" } 
-      else if (locations[i][3] == 'market')       { url = "http://maps.google.com/mapfiles/ms/icons/orange-dot.png" } 
-      else if (locations[i][3] == 'library')      { url = "http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png" } 
-      else if (locations[i][3] == 'church')       { url = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" } 
-      else if (locations[i][3] == 'architecture') { url = "http://maps.google.com/mapfiles/ms/icons/pink-dot.png" } 
+      if      (locations[i][3] == 'museum')       { url = "Images/museumIcon3.svg" } 
+      else if (locations[i][3] == 'art')          { url = "Images/artgallery.svg" } 
+      else if (locations[i][3] == 'park')         { url = "Images/parkIcon.svg" } 
+      else if (locations[i][3] == 'market')       { url = "Images/marketIcon.svg" } 
+      else if (locations[i][3] == 'library')      { url = "Images/libraryIcon.svg" } 
+      else if (locations[i][3] == 'church')       { url = "Images/churchIcon.svg" } 
+      else if (locations[i][3] == 'architecture') { url = "Images/architectureIcon.svg" } 
+      // if      (locations[i][3] == 'museum')       { url = "http://maps.google.com/mapfiles/ms/icons/red-dot.png" } 
+      // else if (locations[i][3] == 'art')          { url = "http://maps.google.com/mapfiles/ms/icons/purple-dot.png" } 
+      // else if (locations[i][3] == 'park')         { url = "http://maps.google.com/mapfiles/ms/icons/green-dot.png" } 
+      // else if (locations[i][3] == 'market')       { url = "http://maps.google.com/mapfiles/ms/icons/orange-dot.png" } 
+      // else if (locations[i][3] == 'library')      { url = "http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png" } 
+      // else if (locations[i][3] == 'church')       { url = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" } 
+      // else if (locations[i][3] == 'architecture') { url = "http://maps.google.com/mapfiles/ms/icons/pink-dot.png" } 
 
       
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
         icon: {
-          url: url
+          url: url,
+          scaledSize: new google.maps.Size(30, 30), // scaled size
         }
       });
 
