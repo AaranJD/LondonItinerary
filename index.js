@@ -48,27 +48,25 @@ function filterDay(e) {
 
 //Filter the list by tab options
 function tabFilter(e) {
-  let filter = e.target.dataset.filter; // grab the value in the event target's data-filter attribute
-  var items = document.getElementsByClassName('Day'), i;
+  var items = document.getElementsByClassName('Tab'), i;
 
   for (i = 0; i < items.length; i += 1) {
-    if (items[i].className != filter) {
+    if (items[i].className != ("Tab " + e)) {
       items[i].style.display = 'none';
-    } 
-    if (items[i].className == filter) {
-      items[i].style.display = '';
+    } else {
+      items[i].style.display = 'grid';
     }
   } 
 };
 
-//Filter the list by tab
-function foodtabFilter() {
-  var day = document.getElementsByClassName('Day'), i;
+// //Filter the list by tab
+// function foodtabFilter() {
+//   var day = document.getElementsByClassName('Day'), i;
 
-  for (i = 0; i < day.length; i += 1) {
-    day[i].style.display = 'none';
-  }
-};
+//   for (i = 0; i < day.length; i += 1) {
+//     day[i].style.display = 'none';
+//   }
+// };
 
 //Filter the list by types
 function filterTypes(e) {

@@ -98,6 +98,12 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.full-screen > * {
+    flex: 1 1 400px;
 }
 
 .left {
@@ -165,6 +171,19 @@ button.btn.active, button:hover {
 }
 
 .Day span:hover {
+    text-decoration: underline;
+    color: var(--clr-btn-hover-dark);
+}
+
+.Market {
+    margin: 16px;
+}
+
+.Market span {
+    padding: 0 8px;
+}
+
+.Market span:hover {
     text-decoration: underline;
     color: var(--clr-btn-hover-dark);
 }

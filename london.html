@@ -102,7 +102,8 @@
                     </ul>
                 </div>
             </div> -->
-            <div class="Day One">
+            <div class="Tab Activities" >
+              <div class="Day One">
                 <h6>Day One:</h5>
                 <span>Camden Market</span>
                 <span>Regents Park</span>
@@ -110,8 +111,8 @@
                 <span>The British Museum</span>
                 <span>Wellcome Collection</span>
                 <span>British Library</span>
-            </div>
-            <div class="Day Two">
+              </div>
+              <div class="Day Two">
                 <h6>Day Two:</h5> 
                   <span>Portabello Road Market</span>
                   <span>Holland Park</span>
@@ -121,8 +122,8 @@
                   <span>Natural History Museum</span>
                   <span>Harrods</span>
                   <span>V&A Museum</span>
-            </div>
-            <div class="Day Three">
+              </div>
+              <div class="Day Three">
                 <h6>Day Three:</h5>
                 <span>Covent Gardens</span>
                 <span>St Jamess Park</span>
@@ -134,8 +135,8 @@
                 <span>Royal Academy of Arts</span>
                 <span>Lego Shop</span>
                 <span>National Gallery</span>
-            </div>
-            <div class="Day Four">
+              </div>
+              <div class="Day Four">
                 <h6>Day Four:</h5>
                 <span>Borough Market</span>
                 <span>Tate Modern</span>
@@ -144,28 +145,102 @@
                 <span>St Dunstan in the East</span>
                 <span>Leadenhall Market</span>
                 <span>Barbican Conservatory</span>
+              </div>
+            </div>
+            <div class="Tab Food" style="display: none;">
+              <div class="Market">
+                <h6>Camden Market</h6>
+                <span>Wok boy</span>
+                <span>Oli Babas</span>
+                <span>StakeHaus</span>
+                <span>Traditional fish and chips</span>
+                <span>Mac Factory</span>
+                <span>The Cheese Wheel</span>
+                <span>Indian Alley</span>
+                <span>Yorkshire Burrito</span>
+                <span>Camden Coffee</span>
+              </div>
+              <div class="Market">
+                <h6>Borough Market</h6>
+                <span>Brindisa</span>
+                <span>El Pastor</span>
+                <span>Padella</span>
+                <span>Kappcasein</span>
+                <span>Bread Ahead</span>
+                <span>The Ginger Pig</span>
+                <span>Hobbs Meat Roast</span>
+              </div>
+            </div>
+            <div class="Tab Photos" style="display: none;">
+              <div class="Market">
+                <h6>Potential Photo Spots</h6>
+                <span>Millennium Bridge</span>
+                <span>K2 Telephone Boxes</span>
+                <span>Big Ben</span>
+                <span>Notting Hill colourful houses</span>
+                <span>Neals Yard</span>
+                <span>Tower Bridge</span>
+                <span>Cable Car</span>
+                <span>The Churchill Arms</span>
+                <span>Platform 9 3/4</span>
+                <span>Abbey Road</span>
+                <span>Leake Street Graffiti tunnel</span>
+                <span>Piccadilly Circus</span>
+                <span>Changing of the Guard</span>
+                <span>London Eye</span>
+                <span>Trafalgar Square</span>
+              </div>
+            </div>
+            <div class="Tab Mews" style="display: none;">
+              <div class="Market">
+                <h6>Mews Streets</h6>
+                <span>Bathurst Mews</span>
+                <span>Drayson Mews</span>
+                <span>Ennismore Mews</span>
+                <span>Ennismore Garden</span>
+                <span>Sussex Mews West</span>
+                <span>Osten Mews</span>
+                <span>Conduit Mews</span>
+                <span>Ensor Mews</span>
+                <span>Atherstone Mews</span>
+                <span>Kynance Mews</span>
+                <span>Holland Park Mews</span>
+                <span>Spear Mews</span>
+                <span>Hyde Park Garden Mews</span>
+                <span>Adam and Eve Mews</span>
+                <span>Creswell Place</span>
+                <span>Kendrick Mews</span>
+                <span>St Lukes Mews</span>
+                <span>Reece Mews</span>
+                <span>Stanhope Mews</span>
+                <span>Redcliffe Mews</span>
+                <span>Queens Gate Mews</span>
+                <span>Cornwall Mews South</span>
+                <span>Warren Mews</span>
+                <span>Colville Mews</span>
+              </div>
             </div>
             <div id="tabsRow">
-              <div class="tab on"  data-filter="Day" onclick="tabFilter(event)">
+              <div class="tab on" onclick="tabFilter('Activities')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
                   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                 </svg>
                 <span>Activities</span>
               </div>
-              <div class="tab" data-filter="Food" onclick="tabFilter(event)">
+              <div class="tab" onclick="tabFilter('Food')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
                   <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
                 </svg>
                 <span>Food</span>
               </div>
-              <div class="tab"  data-filter="Photos" onclick="tabFilter(event)">
+              <div class="tab" onclick="tabFilter('Photos')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
                   <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
                   <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
                 </svg>
                 <span>Photos</span>
               </div>
-              <div class="tab"  data-filter="Mews" onclick="tabFilter(event)">
+              <div class="tab" onclick="tabFilter('Mews')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-signpost" viewBox="0 0 16 16">
                   <path d="M7 1.414V4H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h5v6h2v-6h3.532a1 1 0 0 0 .768-.36l1.933-2.32a.5.5 0 0 0 0-.64L13.3 4.36a1 1 0 0 0-.768-.36H9V1.414a1 1 0 0 0-2 0zM12.532 5l1.666 2-1.666 2H2V5h10.532z"/>
                 </svg>
