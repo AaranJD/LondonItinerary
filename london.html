@@ -36,10 +36,10 @@
           </div>
             <div id="buttonRow">
                 <button class="btn active" data-filter="*" onclick="filterDay(event)">All</button>
-                <button class="btn" data-filter="One" onclick="filterDay(event)">Day 1</button>
-                <button class="btn" data-filter="Two" onclick="filterDay(event)">Day 2</button>
-                <button class="btn" data-filter="Three" onclick="filterDay(event)">Day 3</button>
-                <button class="btn" data-filter="Four" onclick="filterDay(event)">Day 4</button>
+                <button class="btn" data-filter="1" onclick="filterDay(event)">Day 1</button>
+                <button class="btn" data-filter="2" onclick="filterDay(event)">Day 2</button>
+                <button class="btn" data-filter="3" onclick="filterDay(event)">Day 3</button>
+                <button class="btn" data-filter="4" onclick="filterDay(event)">Day 4</button>
             </div>
             <!-- <div class="filterRow">
                 <div class="dropdown">
@@ -102,74 +102,11 @@
                     </ul>
                 </div>
             </div> -->
-            <div class="Tab Activities" >
-              <div class="Day One">
-                <h6>Day One:</h5>
-                <span>Camden Market</span>
-                <span>Regents Park</span>
-                <span>Wallace Collection</span>
-                <span>The British Museum</span>
-                <span>Wellcome Collection</span>
-                <span>British Library</span>
-              </div>
-              <div class="Day Two">
-                <h6>Day Two:</h5> 
-                  <span>Portabello Road Market</span>
-                  <span>Holland Park</span>
-                  <span>Science Museum</span>
-                  <span>Kensington Gardens</span>
-                  <span>Hyde Park</span>
-                  <span>Natural History Museum</span>
-                  <span>Harrods</span>
-                  <span>V&A Museum</span>
-              </div>
-              <div class="Day Three">
-                <h6>Day Three:</h5>
-                <span>Covent Gardens</span>
-                <span>St Jamess Park</span>
-                <span>Westminster Abbey</span>
-                <span>Houses of Parliament</span>
-                <span>Tate Britain</span>
-                <span>Westminster Cathedral</span>
-                <span>Buckinham Palace</span>
-                <span>Royal Academy of Arts</span>
-                <span>Lego Shop</span>
-                <span>National Gallery</span>
-              </div>
-              <div class="Day Four">
-                <h6>Day Four:</h5>
-                <span>Borough Market</span>
-                <span>Tate Modern</span>
-                <span>St Pauls Cathedral</span>
-                <span>Sky Gardens</span>
-                <span>St Dunstan in the East</span>
-                <span>Leadenhall Market</span>
-                <span>Barbican Conservatory</span>
-              </div>
+            <div class="Tab Activities" id="activitiesContainer" >
+                <!-- LIST OF ACTIVITES FOR EACH DAY -->
             </div>
-            <div class="Tab Food" style="display: none;">
-              <div class="Market">
-                <h6>Camden Market</h6>
-                <span>Wok boy</span>
-                <span>Oli Babas</span>
-                <span>StakeHaus</span>
-                <span>Traditional fish and chips</span>
-                <span>Mac Factory</span>
-                <span>The Cheese Wheel</span>
-                <span>Indian Alley</span>
-                <span>Yorkshire Burrito</span>
-                <span>Camden Coffee</span>
-              </div>
-              <div class="Market">
-                <h6>Borough Market</h6>
-                <span>Brindisa</span>
-                <span>El Pastor</span>
-                <span>Padella</span>
-                <span>Kappcasein</span>
-                <span>Bread Ahead</span>
-                <span>The Ginger Pig</span>
-                <span>Hobbs Meat Roast</span>
-              </div>
+            <div class="Tab Food" id="foodContainer">
+                <!-- LIST OF FOOD LOCATIONS FOR EACH DAY -->    
             </div>
             <div class="Tab Photos" style="display: none;">
               <div class="Market">
