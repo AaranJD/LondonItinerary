@@ -166,21 +166,21 @@ function filterDay(e) {
   
   hideMarkers();
   var x, y;
-
+// NEEDS IMPROVING -- SO NOT AS STATIC
   if (Day == "*") {
     x = 0;
     y = activityLocations.length;
   } else if (Day == "1") {
-    x = 8;
-    y = 14;
+    x = 7;
+    y = 13;
   } else if (Day == "2") {
     x = 0;
-    y = 8;
+    y = 7;
   } else if (Day == "3") {
-    x = 14;
-    y = 23;
+    x = 13;
+    y = 22;
   } else if (Day == "4") {
-    x = 23;
+    x = 22;
     y = activityLocations.length;
   }
   addMarkers(activityLocations, x, y);
